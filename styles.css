@@ -52,7 +52,7 @@ body {
   line-height: 1.6;
 }
 
-.wrap { max-width: 760px; margin: auto; padding: 0 24px 90px; }
+.wrap { max-width: 1160px; margin: auto; padding: 0 24px 90px; }
 .hero { padding: 50px 0 12px; }
 .eyebrow { text-transform: uppercase; letter-spacing: .2em; font: .82rem/1.5 var(--mono); color: var(--muted); }
 .eyebrow b { color: var(--lime); }
@@ -69,7 +69,7 @@ h1 {
 .meta { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 28px; }
 .pill { border: 1px solid var(--line); border-radius: 999px; padding: 5px 11px; font-size: .8rem; color: var(--pale); background: #111d15; }
 
-.callout, .alignment, .feedback { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 22px 24px; margin-bottom: 28px; }
+.callout, .alignment, .feedback { max-width: 712px; background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 22px 24px; margin-bottom: 28px; }
 .callout { border-left: 3px solid var(--lime); }
 .callout p { margin: 0 0 12px; }
 .callout p:last-child { margin: 0; }
@@ -115,11 +115,14 @@ details[open] summary:after { background: linear-gradient(var(--lime), var(--lim
 .play { display: inline-block; padding: 11px 20px; border-radius: 999px; background: var(--lime); color: #0f1a10; text-decoration: none; font-weight: 600; }
 
 .feedback p { margin: 0 0 10px; }
-.credit { margin-top: 48px; padding-top: 18px; border-top: 1px solid var(--line); font: .75rem/1.5 var(--mono); text-transform: uppercase; letter-spacing: .18em; color: var(--muted); }
+footer { color: var(--pale); background: #0a140b; }
+.footer-inner { min-height: 190px; padding-block: 3rem; display: flex; align-items: flex-end; justify-content: space-between; gap: 2rem; }
+.footer-logo { width: 10rem; height: auto; display: block; }
+.footer-copy { max-width: 480px; margin: 0; color: rgba(238, 245, 234, .62); font-size: .87rem; text-align: right; }
 
 
 .site-header { position: sticky; top: 0; z-index: 50; background: var(--bg); border-bottom: 1px solid var(--line); }
-.bar-inner { max-width: 760px; margin: auto; padding: 0 24px; }
+.bar-inner { max-width: 1160px; margin: auto; padding: 0 24px; }
 .nav-row { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 5.4rem; }
 .brand { display: flex; align-items: center; gap: .6rem; text-decoration: none; }
 .brand-mark-sm { width: 8.2rem; height: auto; display: block; }
@@ -163,7 +166,8 @@ details[open] summary:after { background: linear-gradient(var(--lime), var(--lim
   .video div { padding: 9px 11px; font-size: .9rem; }
   summary { padding: 15px 16px; align-items: flex-start; gap: .45rem; font-size: 1rem; line-height: 1.35; overflow-wrap: anywhere; }
   .time { flex: 0 0 auto; font-size: .66rem; padding: 3px 7px; margin-top: 1px; }
-  .credit { margin-top: 34px; font-size: .65rem; line-height: 1.5; }
+  .footer-inner { align-items: flex-start; flex-direction: column; }
+  .footer-copy { text-align: left; }
 }
 
 @media (prefers-reduced-motion: reduce) {
