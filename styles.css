@@ -70,11 +70,13 @@ h1 {
 .pill { border: 1px solid var(--line); border-radius: 999px; padding: 5px 11px; font-size: .8rem; color: var(--pale); background: #111d15; }
 
 .callout, .alignment, .feedback { padding-block: clamp(2rem, 4vw, 3rem); border-top: 1px solid var(--line); }
+.alignment { background: var(--pale); color: var(--bg); border-top: 0; }
 .callout p, .alignment p, .feedback p { max-width: 760px; margin: 0 0 14px; line-height: 1.65; }
 .callout p:last-child, .alignment p:last-child, .feedback p:last-child { margin: 0; }
 .feedback { border-bottom: 1px solid var(--line); }
 
 .alignment h2, .feedback h2 { font: .9rem/1.4 var(--mono); text-transform: uppercase; letter-spacing: .1em; color: var(--lime2); margin: 0 0 10px; }
+.alignment h2 { color: #5c7a30; }
 .alignment p { margin: 0 0 10px; }
 .outcomes { margin: 8px 0 0; padding-left: 22px; }
 .outcomes li { margin: 7px 0; }
@@ -92,6 +94,9 @@ h1 {
 .button.secondary { background: transparent; color: var(--lime2); border: 1px solid var(--line); }
 .button.secondary:hover { background: rgba(148, 214, 79, .1); border-color: var(--lime2); color: var(--pale); box-shadow: none; }
 .button.secondary:active { background: rgba(148, 214, 79, .18); border-color: var(--lime); }
+.alignment .button.secondary { color: var(--bg); border-color: rgba(16, 26, 18, .35); }
+.alignment .button.secondary:hover { background: rgba(16, 26, 18, .08); border-color: var(--bg); color: var(--bg); }
+.alignment .button.secondary:active { background: rgba(16, 26, 18, .16); }
 .button .dl-icon { width: 14px; height: 14px; flex: 0 0 auto; transition: transform .18s ease; }
 .button:hover .dl-icon { transform: translateY(2px); }
 
