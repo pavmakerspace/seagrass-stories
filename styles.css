@@ -58,7 +58,7 @@ main { display: block; padding-bottom: 90px; }
 .eyebrow b { color: var(--lime); }
 
 h1 {
-  font-weight: 300;
+  font-weight: 700;
   font-size: clamp(2rem, 6vw, 2.8rem);
   line-height: 1.12;
   color: var(--pale);
@@ -70,7 +70,6 @@ h1 {
 .pill { border: 1px solid var(--line); border-radius: 999px; padding: 5px 11px; font-size: .8rem; color: var(--pale); background: #111d15; }
 
 .callout, .alignment, .feedback { padding-block: clamp(2rem, 4vw, 3rem); border-top: 1px solid var(--line); }
-.callout { background: #0a2429; border-top: 0; }
 .alignment { background: var(--pale); color: var(--bg); border-top: 0; }
 .callout p, .alignment p, .feedback p { max-width: 760px; margin: 0 0 14px; line-height: 1.65; }
 .callout p:last-child, .alignment p:last-child, .feedback p:last-child { margin: 0; }
