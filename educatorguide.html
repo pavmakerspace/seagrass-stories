@@ -34,6 +34,13 @@
       font-style: normal;
       font-display: swap;
     }
+    @font-face {
+      font-family: 'DM Mono';
+      src: url('assets/fonts/DMMono-Medium.ttf') format('truetype');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
 
     :root {
       --navy: #0e2a38;
@@ -530,7 +537,7 @@
     :root {
       --navy: #0b2940;
       --teal: #287b6d;
-      --blue: #3573c8;
+      --blue: #0072ce;
       --paper: #ffffff;
       --wash: #f2f6f4;
       --text: #0b2940;
@@ -539,9 +546,23 @@
       --border-light: rgba(11, 41, 64, .14);
       --font-heading: 'Zeist', Arial, 'Helvetica Neue', sans-serif;
       --font-body: 'Zeist', Arial, 'Helvetica Neue', sans-serif;
+      --font-mono: 'DM Mono', 'SFMono-Regular', monospace;
     }
 
     body { background: #dfe5e6; color: var(--navy); line-height: 1.42; }
+    .eyebrow, .section-label, .col-label, .phase-card-time, .step-name, .doc-footer, .print-badge {
+      font-family: var(--font-mono);
+    }
+    .bullet-list li::before { font-family: var(--font-mono); }
+    .bullet-list.dtf li::before { content: none; }
+    .bullet-list.dtf li b {
+      display: block;
+      margin-bottom: 2mm;
+      color: var(--blue);
+      font: 800 7px/1 var(--font-mono);
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
 
     .print-action-bar {
       width: min(210mm, calc(100% - 24px));
@@ -552,6 +573,13 @@
     }
 
     .print-btn { border-radius: 99px; padding: 9px 16px; letter-spacing: .08em; }
+
+    .print-nav { flex: 1 1 auto; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; min-width: 0; font-size: 12px; }
+    .print-nav a { color: var(--blue); text-decoration: none; font-weight: 700; }
+    .print-nav a:hover { text-decoration: underline; }
+    .print-nav .sep { color: var(--border); }
+    .print-nav b { color: var(--navy); }
+    .print-nav .switch { margin-left: auto; padding-left: 8px; }
 
     .sheet {
       position: relative;
@@ -932,9 +960,11 @@
 
   <!-- SCREEN-ONLY ACTION BAR -->
   <aside class="print-action-bar" aria-label="Print controls">
-    <div class="action-text">
-      <strong>Educator Guide:</strong> Formatted for A4 printing or PDF export.
-    </div>
+    <nav class="print-nav">
+      <a href="index.html" onclick="if(history.length>1){history.back();return false;}">← Seagrass Stories</a>
+      <span class="sep">·</span><b>Educator Guide</b>
+      <a class="switch" href="learneractivity.html">View Learner Activity →</a>
+    </nav>
     <button class="print-btn" onclick="window.print()">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <polyline points="6 9 6 2 18 2 18 9"></polyline>
@@ -970,16 +1000,16 @@
       <p class="body-copy">Explore how seagrass restoration works and use what you discover to help someone else understand it.</p>
 
       <div class="section-label">Learning outcomes</div>
-      <ul class="bullet-list">
-        <li>Understand how restoration supports the recovery of seagrass meadows.</li>
-        <li>Investigate how the game represents restoration through changes, timescales and evidence of recovery.</li>
-        <li>Create an experience that uses choices, consequences and change over time to communicate an idea about ocean restoration.</li>
+      <ul class="bullet-list dtf">
+        <li><b>Do</b>Create an experience that uses choices, consequences and change over time to communicate an idea about ocean restoration.</li>
+        <li><b>Think</b>Understand how restoration supports the recovery of seagrass meadows, and how the game represents that process through changes, timescales and evidence of recovery.</li>
+        <li><b>Feel</b>Build curiosity and a sense of agency in ocean restoration, seeing how small, deliberate interventions can support a habitat's recovery.</li>
       </ul>
 
       <div class="section-label">Learning journey</div>
       <div class="journey-strip">
         <div class="journey-step">
-          <div class="step-name">Experience</div>
+          <div class="step-name">Explore</div>
           <div class="step-sub">Enter the meadow</div>
         </div>
         <div class="journey-step">
@@ -1028,7 +1058,7 @@
             <div class="eyebrow">Facilitation Guide</div>
             <span class="print-badge">Session Timeline</span>
           </div>
-          <h1 class="main-title" style="font-size: 22px;">Experience → Investigate → Reflect → Create</h1>
+          <h1 class="main-title" style="font-size: 22px;">Explore → Investigate → Reflect → Create</h1>
         </div>
       </header>
 
@@ -1036,7 +1066,7 @@
         <!-- 1 -->
         <div class="phase-card">
           <div class="phase-card-header">
-            <span class="phase-card-title">1. Experience</span>
+            <span class="phase-card-title">1. Explore</span>
             <span class="phase-card-time">15 min</span>
           </div>
           <div class="phase-card-body">
@@ -1141,7 +1171,7 @@
       <div class="notes-grid">
         <div class="note-box">
           <h3>See • Think • Wonder</h3>
-          <p>Use this routine during Experience to move from observation to inquiry. Give learners time to notice before inviting explanations. Capture different interpretations and questions, then revisit them later.</p>
+          <p>Use this routine during Explore to move from observation to inquiry. Give learners time to notice before inviting explanations. Capture different interpretations and questions, then revisit them later. Adapted from Harvard Project Zero's <em>See-Think-Wonder</em> thinking routine.</p>
         </div>
         <div class="note-box">
           <h3>The 6–10 Post-it Constraint</h3>
