@@ -59,8 +59,9 @@ main { display: block; padding-bottom: 90px; }
 
 h1 {
   font-weight: 700;
-  font-size: clamp(2rem, 6vw, 2.8rem);
-  line-height: 1.12;
+  font-size: clamp(3.25rem, 8vw, 6.8rem);
+  line-height: .89;
+  letter-spacing: -.055em;
   color: var(--pale);
   max-width: 18ch;
   margin: 16px 0 20px;
@@ -157,7 +158,7 @@ footer { color: var(--pale); background: #0a140b; }
   .progress { gap: 1rem; font-size: .62rem; }
   #step-1, #step-2, #step-3, #step-4 { scroll-margin-top: 6.8rem; }
   .eyebrow { font-size: .7rem; line-height: 1.5; }
-  .hero h1 { font-size: clamp(2rem, 10vw, 2.45rem); margin: 14px 0 18px; }
+  .hero h1 { font-size: clamp(2.75rem, 14vw, 4.3rem); margin: 14px 0 18px; }
   .meta { gap: 6px; margin-bottom: 22px; }
   .pill { font-size: .72rem; padding: 4px 9px; }
   .callout, .alignment, .feedback { padding-block: 22px; }
