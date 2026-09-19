@@ -119,15 +119,15 @@ details[open] summary:after { background: linear-gradient(var(--lime), var(--lim
 
 .site-header { position: sticky; top: 0; z-index: 50; background: var(--bg); border-bottom: 1px solid var(--line); }
 .bar-inner { max-width: 1160px; margin: auto; padding: 0 24px; }
-.nav-row { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 4.4rem; }
+.nav-row { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 5.4rem; }
 .brand { display: flex; align-items: center; gap: .6rem; text-decoration: none; }
-.brand-mark-sm { height: 18px; width: auto; display: block; }
-.brand-name { font: 700 .76rem/1.4 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--pale); }
+.brand-mark-sm { width: 8.2rem; height: auto; display: block; }
+.brand-name { font: 700 .83rem/1.4 var(--mono); letter-spacing: .17em; text-transform: uppercase; color: var(--pale); }
 .header-links { display: flex; gap: 1.4rem; }
-.header-links a { color: var(--pale); text-decoration: none; font-size: .76rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.header-links a { color: var(--pale); text-decoration: none; font-size: .78rem; font-weight: 700; letter-spacing: .11em; text-transform: uppercase; }
 .header-links a:hover { color: var(--lime); }
 .progress-shell { border-top: 1px solid var(--line); }
-.progress { display: flex; gap: 1.3rem; overflow-x: auto; padding: .5rem 0; font: 700 .68rem/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; scrollbar-width: none; }
+.progress { display: flex; gap: 1.6rem; overflow-x: auto; padding: .55rem 0; font: 700 .7rem/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; scrollbar-width: none; }
 .progress::-webkit-scrollbar { display: none; }
 .progress a { display: flex; align-items: center; gap: .4rem; flex: 0 0 auto; color: rgba(238, 245, 234, .5); text-decoration: none; white-space: nowrap; border-bottom: 2px solid transparent; padding: .15rem 0; }
 .progress a b { font-weight: 700; color: rgba(238, 245, 234, .35); }
@@ -142,6 +142,7 @@ details[open] summary:after { background: linear-gradient(var(--lime), var(--lim
   .hero { padding: 20px 2px 8px; }
   .bar-inner { padding: 0 16px; }
   .nav-row { min-height: 3.8rem; }
+  .brand-mark-sm { width: 7.2rem; }
   .brand-name { display: none; }
   .progress { gap: 1rem; font-size: .62rem; }
   #step-1, #step-2, #step-3, #step-4 { scroll-margin-top: 6.8rem; }
