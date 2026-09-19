@@ -119,7 +119,7 @@ details[open] summary:after { background: linear-gradient(var(--lime), var(--lim
 
 
 .site-header { position: sticky; top: 0; z-index: 50; background: var(--bg); border-bottom: 1px solid var(--line); }
-.bar-inner { max-width: 1160px; margin: auto; padding: 0 24px; }
+.bar-inner { max-width: 760px; margin: auto; padding: 0 24px; }
 .nav-row { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 5.4rem; }
 .brand { display: flex; align-items: center; gap: .6rem; text-decoration: none; }
 .brand-mark-sm { width: 8.2rem; height: auto; display: block; }
