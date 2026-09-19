@@ -41,6 +41,7 @@
 }
 
 * { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
@@ -163,4 +164,8 @@ details[open] summary:after { background: linear-gradient(var(--lime), var(--lim
   summary { padding: 15px 16px; align-items: flex-start; gap: .45rem; font-size: 1rem; line-height: 1.35; overflow-wrap: anywhere; }
   .time { flex: 0 0 auto; font-size: .66rem; padding: 3px 7px; margin-top: 1px; }
   .credit { margin-top: 34px; font-size: .65rem; line-height: 1.5; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
 }
