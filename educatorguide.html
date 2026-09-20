@@ -89,16 +89,6 @@
       box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
     }
 
-    .action-text {
-      font-size: 12px;
-      color: var(--text-muted);
-      line-height: 1.4;
-    }
-
-    .action-text strong {
-      color: var(--navy);
-    }
-
     .print-btn {
       display: inline-flex;
       align-items: center;
@@ -186,6 +176,8 @@
       line-height: 1.1;
     }
 
+    .main-title.page2-title { font-size: 22px; }
+
     .meta-pills {
       display: flex;
       flex-wrap: wrap;
@@ -214,6 +206,8 @@
       margin-bottom: 4px;
     }
 
+    .section-label.section-label--spaced { margin-top: 12px; }
+
     .lead-question {
       font-family: var(--font-heading);
       font-size: 16px;
@@ -235,6 +229,8 @@
       line-height: 1.55;
       margin-bottom: 8px;
     }
+
+    .body-copy.body-copy--spaced { margin-top: 8px; }
 
     .bullet-list {
       list-style: none;
@@ -436,7 +432,7 @@
         padding: 2px;
       }
       .journey-step:not(:last-child)::after {
-        content: "→";
+        content: "·";
         position: absolute;
         right: -8px;
         top: 25%;
@@ -509,7 +505,7 @@
         position: relative;
       }
       .journey-step:not(:last-child)::after {
-        content: "→";
+        content: "·";
         position: absolute;
         right: -8px;
         top: 25%;
@@ -701,7 +697,7 @@
       text-align: left;
     }
     .journey-step:not(:last-child)::after {
-      content: "→";
+      content: "·";
       position: absolute;
       top: 3.2mm;
       right: 4mm;
@@ -713,7 +709,7 @@
 
     .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 9mm; margin-top: 0; }
     .two-col > div { padding-top: 3mm; border-top: 1px solid var(--navy); }
-    .two-col .section-label[style] { margin-top: 5mm !important; }
+    .two-col .section-label--spaced { margin-top: 5mm !important; }
 
     /* Page 2: facilitation sequence */
     .sheet:nth-of-type(2) .header { grid-template-columns: 1fr; margin-bottom: 4mm; }
@@ -777,7 +773,7 @@
       border-top: 3px solid var(--teal);
       border-radius: 0;
     }
-    .note-box[style] { grid-column: 1 / -1 !important; border-top-width: 1px; }
+    .note-box--wide { grid-column: 1 / -1 !important; border-top-width: 1px; }
     .note-box h3 { margin-bottom: 1.5mm; font-size: 8px; letter-spacing: .08em; }
     .note-box p { color: var(--text-muted); font-size: 8px; line-height: 1.42; }
 
@@ -819,9 +815,12 @@
         padding: 10px 14px;
         border-radius: 0;
         box-shadow: 0 1px 8px rgba(11, 41, 64, .1);
+        flex-wrap: wrap;
+        row-gap: 8px;
       }
-      .action-text { font-size: 11px; }
-      .print-btn { padding: 9px 12px; font-size: 9px; }
+      .print-nav { width: 100%; }
+      .print-nav .switch { margin-left: 0; flex-basis: 100%; }
+      .print-btn { padding: 9px 12px; font-size: 9px; flex: 0 0 auto; }
       .print-btn svg { display: none; }
 
       .sheet {
@@ -890,7 +889,7 @@
 
       .two-col { display: block; }
       .two-col > div { margin-bottom: 28px; padding-top: 16px; }
-      .two-col .section-label[style] { margin-top: 26px !important; }
+      .two-col .section-label--spaced { margin-top: 26px !important; }
 
       .sequence-stack { margin-bottom: 30px; }
       .phase-card {
@@ -917,8 +916,7 @@
       .col-content { font-size: 14px; line-height: 1.55; }
 
       .notes-grid { display: block; }
-      .note-box,
-      .note-box[style] {
+      .note-box {
         margin-bottom: 26px;
         padding-top: 14px;
       }
@@ -961,9 +959,9 @@
   <!-- SCREEN-ONLY ACTION BAR -->
   <aside class="print-action-bar" aria-label="Print controls">
     <nav class="print-nav">
-      <a href="index.html" onclick="if(history.length>1){history.back();return false;}">← Seagrass Stories</a>
+      <a href="index.html" onclick="if(history.length>1){history.back();return false;}">Back to Seagrass Stories</a>
       <span class="sep">·</span><b>Educator Guide</b>
-      <a class="switch" href="learneractivity.html">View Learner Activity →</a>
+      <a class="switch" href="learneractivity.html">View Learner Activity</a>
     </nav>
     <button class="print-btn" onclick="window.print()">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -988,7 +986,7 @@
         </div>
         <div class="meta-pills">
           <span>Ages 12–14</span>
-          <span>60 minutes</span>
+          <span>60–75 minutes</span>
           <span>Groups of 2–3</span>
         </div>
       </header>
@@ -1031,14 +1029,14 @@
           <div class="section-label">What you need</div>
           <p class="body-copy">Internet-connected display and student devices where possible; access to the Seagrass Stories webpage and game; one Learner Graphic Organiser per learner or group; 6–10 Post-its per group; pens or markers.</p>
 
-          <div class="section-label" style="margin-top: 12px;">Facilitation approach</div>
+          <div class="section-label section-label--spaced">Facilitation approach</div>
           <p class="body-copy">Learners encounter the subject, investigate it through play, reflect on what they discover and apply their understanding through creation. Facilitation focuses on curiosity, questions, connections and evidence of learning.</p>
         </div>
 
         <div>
           <div class="section-label">Before you begin</div>
           <p class="body-copy">The restoration mats support seagrass shoots so they can stay in place, take root and grow. The game represents parts of the restoration process. Encourage learners to explore what changes, what takes time and what evidence could indicate recovery.</p>
-          <p class="body-copy" style="margin-top: 8px;">Use the Learner Graphic Organiser throughout the session to make thinking visible. Learners can write, sketch, connect ideas and return to earlier thinking as their understanding develops.</p>
+          <p class="body-copy body-copy--spaced">Use the Learner Graphic Organiser throughout the session to make thinking visible. Learners can write, sketch, connect ideas and return to earlier thinking as their understanding develops.</p>
         </div>
       </div>
     </div>
@@ -1058,7 +1056,7 @@
             <div class="eyebrow">Facilitation Guide</div>
             <span class="print-badge">Session Timeline</span>
           </div>
-          <h1 class="main-title" style="font-size: 22px;">Explore → Investigate → Reflect → Create</h1>
+          <h1 class="main-title page2-title">Explore · Investigate · Reflect · Create</h1>
         </div>
       </header>
 
@@ -1072,7 +1070,7 @@
           <div class="phase-card-body">
             <div>
               <div class="col-label">Learner Activity</div>
-              <div class="col-content">Watch, observe the meadow, meet Nada and capture initial thinking using <em>See • Think • Wonder</em>.</div>
+              <div class="col-content">In groups, split up the three videos rather than everyone watching all of them, holding two questions in mind as they watch. Debrief the rest using <em>See • Think • Wonder</em>.</div>
             </div>
             <div>
               <div class="col-label">Key Questions & Prompts</div>
@@ -1162,7 +1160,7 @@
             </div>
             <div>
               <div class="col-label">Evidence of Learning</div>
-              <div class="col-content">Learners communicate understanding through a causal chain: Choice / Action → Consequence → Habitat Response → Change Over Time.</div>
+              <div class="col-content">Learners communicate understanding through a causal chain: Choice / Action · Consequence · Habitat Response · Change Over Time.</div>
             </div>
           </div>
         </div>
@@ -1177,7 +1175,7 @@
           <h3>The 6–10 Post-it Constraint</h3>
           <p>Gives learners enough elements to explore relationships while keeping the system workable. Ask groups to connect Post-its with arrows: <em>Show how one change leads to the next.</em></p>
         </div>
-        <div class="note-box" style="grid-column: 1 / -1;">
+        <div class="note-box note-box--wide">
           <h3>After the Session</h3>
           <p>Capture where curiosity appeared, which connections learners made, what their creations revealed about understanding, and where the experience could be strengthened.</p>
         </div>
