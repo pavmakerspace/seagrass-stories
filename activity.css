@@ -1649,3 +1649,21 @@
               width: 90px
             }
         }
+
+          @media print {
+            body,
+            .sheet,
+            .investigate,
+            .create,
+            .chain-card,
+            .note-box,
+            .journey-strip {
+              color: #1f2937;
+              background: #fff !important
+            }
+
+            .sheet:last-of-type {
+              break-after: auto;
+              page-break-after: auto
+            }
+          }
