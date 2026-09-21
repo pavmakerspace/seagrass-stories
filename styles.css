@@ -41,7 +41,7 @@ h1 {
   font-weight: 500;
   font-size: clamp(3.25rem, 8vw, 6.8rem);
   line-height: 1.12;
-  letter-spacing: -.03em;
+  letter-spacing: -.02em;
   color: var(--pale);
   max-width: 18ch;
   margin: 16px 0 20px;
@@ -167,7 +167,7 @@ h1 {
   font-weight: 500;
   font-size: clamp(2.15rem, 5vw, 4.2rem);
   line-height: 1.15;
-  letter-spacing: -.03em;
+  letter-spacing: -.02em;
   color: var(--bg);
 }
 
