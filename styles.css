@@ -25,6 +25,7 @@ body {
   color: var(--body);
   font-family: var(--sans);
   font-size: 17px;
+  font-weight: 300;
   line-height: 1.6;
 }
 
@@ -37,10 +38,10 @@ main {
 }
 
 h1 {
-  font-weight: 700;
+  font-weight: 500;
   font-size: clamp(3.25rem, 8vw, 6.8rem);
-  line-height: .89;
-  letter-spacing: -.055em;
+  line-height: 1.12;
+  letter-spacing: -.03em;
   color: var(--pale);
   max-width: 18ch;
   margin: 16px 0 20px;
@@ -81,7 +82,8 @@ h1 {
 .feedback p {
   max-width: 760px;
   margin: 0 0 14px;
-  line-height: 1.65;
+  font-weight: 300;
+  line-height: 1.6;
 }
 
 .overview p:last-child,
@@ -162,10 +164,10 @@ h1 {
 .resources-title {
   max-width: 850px;
   margin: 0;
-  font-weight: 700;
+  font-weight: 500;
   font-size: clamp(2.15rem, 5vw, 4.2rem);
-  line-height: 1;
-  letter-spacing: -.045em;
+  line-height: 1.15;
+  letter-spacing: -.03em;
   color: var(--bg);
 }
 
